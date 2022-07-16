@@ -3,3 +3,4 @@ halo==0.0.31
 pytest==6.2.5
 responses==0.21.0
 pytest-asyncio==0.15.1
+portray==1.7.0

@@ -1,0 +1,1487 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Token Manager - datalakeTest</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="lightgreen">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-datalakecommontoken_manager" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="datalakeTest" class="md-header__button md-logo" aria-label="datalakeTest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            datalakeTest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Token Manager
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Hugo-C/datalake/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    datalake
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="datalakeTest" class="md-nav__button md-logo" aria-label="datalakeTest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    datalakeTest
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Hugo-C/datalake/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    datalake
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorial/" class="md-nav__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Add_threats/" class="md-nav__link">
+        Add Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Bulk_lookup_threats/" class="md-nav__link">
+        Bulk Lookup Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/CONTRIBUTING/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Edit_score/" class="md-nav__link">
+        Edit Score
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Get_threats/" class="md-nav__link">
+        Get Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Get_threats_from_query_hash/" class="md-nav__link">
+        Get Threats From Query Hash
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Lookup_threats/" class="md-nav__link">
+        Lookup Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/advanced_search/" class="md-nav__link">
+        Advanced Search
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          Datalake
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Datalake" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          Datalake
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datalake/" class="md-nav__link">
+        Datalake
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1_3" type="checkbox" id="__nav_11_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1_3">
+          Api Objects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Api Objects" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Api Objects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_objects/bulk_search_task/" class="md-nav__link">
+        Bulk Search Task
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_objects/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1_4" type="checkbox" id="__nav_11_1_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1_4">
+          Common
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Common" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Common
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../atom/" class="md-nav__link">
+        Atom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../atom_type/" class="md-nav__link">
+        Atom Type
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logger/" class="md-nav__link">
+        Logger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ouput/" class="md-nav__link">
+        Ouput
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../throttler/" class="md-nav__link">
+        Throttler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Token Manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Token Manager
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokenmanager" class="md-nav__link">
+    TokenManager
+  </a>
+  
+    <nav class="md-nav" aria-label="TokenManager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch_new_token" class="md-nav__link">
+    fetch_new_token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_token" class="md-nav__link">
+    get_token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process_auth_error" class="md-nav__link">
+    process_auth_error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
+        Utils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../warn/" class="md-nav__link">
+        Warn
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1_5" type="checkbox" id="__nav_11_1_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1_5">
+          Endpoints
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Endpoints" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Endpoints
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../endpoints/advanced_search/" class="md-nav__link">
+        Advanced Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../endpoints/bulk_search/" class="md-nav__link">
+        Bulk Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../endpoints/endpoint/" class="md-nav__link">
+        Endpoint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../endpoints/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../endpoints/sightings/" class="md-nav__link">
+        Sightings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../endpoints/tags/" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../endpoints/threats/" class="md-nav__link">
+        Threats
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokenmanager" class="md-nav__link">
+    TokenManager
+  </a>
+  
+    <nav class="md-nav" aria-label="TokenManager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch_new_token" class="md-nav__link">
+    fetch_new_token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_token" class="md-nav__link">
+    get_token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process_auth_error" class="md-nav__link">
+    process_auth_error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Hugo-C/datalake/edit/main/reference/datalake/common/token_manager.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="module-datalakecommontoken_manager">Module datalake.common.token_manager</h1>
+<p>Token manager will manage tokens for the scripts.</p>
+<p>None</p>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">Token manager will manage tokens for the scripts.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getpass</span>
+
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urljoin</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="kn">from</span> <span class="nn">datalake.common.logger</span> <span class="kn">import</span> <span class="n">logger</span>
+
+<span class="k">class</span> <span class="nc">TokenManager</span><span class="p">:</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Use it to generate token access to the API</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint_config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">environment</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;environment can be either prod or preprod&quot;&quot;&quot;</span>
+
+        <span class="n">base_url</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="n">endpoint_config</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="n">environment</span><span class="p">],</span> <span class="n">endpoint_config</span><span class="p">[</span><span class="s1">&#39;api_version&#39;</span><span class="p">])</span>
+
+        <span class="n">endpoints</span> <span class="o">=</span> <span class="n">endpoint_config</span><span class="p">[</span><span class="s1">&#39;endpoints&#39;</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">url_token</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">endpoints</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">],</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">url_refresh</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">endpoints</span><span class="p">[</span><span class="s1">&#39;refresh_token&#39;</span><span class="p">],</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_token</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Generate token from user input, with email and password</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OCD_DTL_USERNAME&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Email: &#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OCD_DTL_PASSWORD&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">getpass</span><span class="p">()</span>
+
+        <span class="nb">print</span><span class="p">()</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">}</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">url_token</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="n">json_response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Token </span><span class="si">{</span><span class="n">json_response</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">refresh_token</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Token </span><span class="si">{</span><span class="n">json_response</span><span class="p">[</span><span class="s2">&quot;refresh_token&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
+
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;An error occurred while retrieving an access token, for URL: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url_token</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+                         <span class="sa">f</span><span class="s1">&#39;response of the API: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Could not login: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">fetch_new_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Token will be refreshed&#39;</span><span class="p">)</span>
+
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">refresh_token</span><span class="p">}</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">url_refresh</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+        <span class="n">json_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">401</span> <span class="ow">and</span> <span class="n">json_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;messages&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Token has expired&#39;</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Refreshing the refresh token&#39;</span><span class="p">)</span>
+
+            <span class="c1"># Refresh token is also expired, we need to restart the authentication from scratch</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="s1">&#39;access_token&#39;</span> <span class="ow">in</span> <span class="n">json_response</span><span class="p">:</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Token </span><span class="si">{</span><span class="n">json_response</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
+
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># an error occurred</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;An error occurred while refreshing the refresh token, for URL: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url_refresh</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+                         <span class="sa">f</span><span class="s1">&#39;response of the API: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Could not refresh the token: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">process_auth_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_msg</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Allow to update token when API response is either Missing Authorization Header or Token has expired.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">error_msg</span> <span class="ow">in</span> <span class="p">(</span>
+
+                <span class="s1">&#39;Missing Authorization Header&#39;</span><span class="p">,</span>
+
+                <span class="s1">&#39;Bad Authorization header. Expected value </span><span class="se">\&#39;</span><span class="s1">Token &lt;JWT&gt;</span><span class="se">\&#39;</span><span class="s1">&#39;</span>
+
+        <span class="p">):</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="n">error_msg</span> <span class="o">==</span> <span class="s1">&#39;Token has expired&#39;</span><span class="p">:</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">fetch_new_token</span><span class="p">()</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unexpected msg: </span><span class="si">{</span><span class="n">error_msg</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+<h2 id="classes">Classes</h2>
+<h3 id="tokenmanager">TokenManager</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">TokenManager</span><span class="p">(</span>
+    <span class="n">endpoint_config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">environment</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nl">TokenManager</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">    Use it to generate token access to the API</span>
+
+<span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nl">endpoint_config</span><span class="p">:</span><span class="w"> </span><span class="n">dict</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="nl">environment</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="o">=</span><span class="k">None</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="o">=</span><span class="k">None</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;environment can be either prod or preprod&quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">base_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">urljoin</span><span class="p">(</span><span class="n">endpoint_config</span><span class="o">[</span><span class="n">&#39;main&#39;</span><span class="o">][</span><span class="n">environment</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">endpoint_config</span><span class="o">[</span><span class="n">&#39;api_version&#39;</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">endpoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">endpoint_config</span><span class="o">[</span><span class="n">&#39;endpoints&#39;</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">url_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">urljoin</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span><span class="w"> </span><span class="n">endpoints</span><span class="o">[</span><span class="n">&#39;token&#39;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">allow_fragments</span><span class="o">=</span><span class="k">True</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">url_refresh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">urljoin</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span><span class="w"> </span><span class="n">endpoints</span><span class="o">[</span><span class="n">&#39;refresh_token&#39;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">allow_fragments</span><span class="o">=</span><span class="k">True</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">username</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">password</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">refresh_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">get_token</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">get_token</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">        Generate token from user input, with email and password</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">username</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OCD_DTL_USERNAME&#39;</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">input</span><span class="p">(</span><span class="s1">&#39;Email: &#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OCD_DTL_PASSWORD&#39;</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">getpass</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">print</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;email&#39;</span><span class="err">:</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="err">:</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">self</span><span class="p">.</span><span class="n">url_token</span><span class="p">,</span><span class="w"> </span><span class="n">json</span><span class="o">=</span><span class="k">data</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">json_response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nc">text</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;Token {json_response[&quot;access_token&quot;]}&#39;</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">refresh_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;Token {json_response[&quot;refresh_token&quot;]}&#39;</span><span class="w"></span>
+
+<span class="w">        </span><span class="ow">except</span><span class="w"> </span><span class="nl">KeyError</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;An error occurred while retrieving an access token, for URL: {self.url_token}\n&#39;</span><span class="w"></span>
+
+<span class="w">                         </span><span class="n">f</span><span class="s1">&#39;response of the API: {response.text}&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">ValueError</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Could not login: {response.text}&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">fetch_new_token</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Token will be refreshed&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;Authorization&#39;</span><span class="err">:</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">refresh_token</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">self</span><span class="p">.</span><span class="n">url_refresh</span><span class="p">,</span><span class="w"> </span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">json_response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">401</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">json_response</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s1">&#39;messages&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Token has expired&#39;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Refreshing the refresh token&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="n">Refresh</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">expired</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">need</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">restart</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">authentication</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">scratch</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">get_token</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">elif</span><span class="w"> </span><span class="s1">&#39;access_token&#39;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">json_response</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;Token {json_response[&quot;access_token&quot;]}&#39;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">occurred</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;An error occurred while refreshing the refresh token, for URL: {self.url_refresh}\n&#39;</span><span class="w"></span>
+
+<span class="w">                         </span><span class="n">f</span><span class="s1">&#39;response of the API: {response.text}&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">ValueError</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Could not refresh the token: {response.text}&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">process_auth_error</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nl">error_msg</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">        Allow to update token when API response is either Missing Authorization Header or Token has expired.</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">error_msg</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="s1">&#39;Missing Authorization Header&#39;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="s1">&#39;Bad Authorization header. Expected value \&#39;</span><span class="n">Token</span><span class="w"> </span><span class="o">&lt;</span><span class="n">JWT</span><span class="o">&gt;</span><span class="err">\</span><span class="s1">&#39;&#39;</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">get_token</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">elif</span><span class="w"> </span><span class="n">error_msg</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Token has expired&#39;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">fetch_new_token</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">ValueError</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Unexpected msg: {error_msg}&#39;</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<hr />
+<h4 id="methods">Methods</h4>
+<h4 id="fetch_new_token">fetch_new_token</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">fetch_new_token</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code>    <span class="nv">def</span> <span class="nv">fetch_new_token</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
+
+        <span class="nv">logger</span>.<span class="nv">debug</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">Token will be refreshed</span><span class="s1">&#39;</span><span class="ss">)</span>
+
+        <span class="nv">headers</span> <span class="o">=</span> {<span class="s1">&#39;</span><span class="s">Authorization</span><span class="s1">&#39;</span>: <span class="nv">self</span>.<span class="nv">refresh_token</span>}
+
+        <span class="nv">response</span> <span class="o">=</span> <span class="nv">requests</span>.<span class="nv">post</span><span class="ss">(</span><span class="nv">url</span><span class="o">=</span><span class="nv">self</span>.<span class="nv">url_refresh</span>, <span class="nv">headers</span><span class="o">=</span><span class="nv">headers</span><span class="ss">)</span>
+
+        <span class="nv">json_response</span> <span class="o">=</span> <span class="nv">response</span>.<span class="nv">json</span><span class="ss">()</span>
+
+        <span class="k">if</span> <span class="nv">response</span>.<span class="nv">status_code</span> <span class="o">==</span> <span class="mi">401</span> <span class="nv">and</span> <span class="nv">json_response</span>.<span class="nv">get</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">messages</span><span class="s1">&#39;</span><span class="ss">)</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="s">Token has expired</span><span class="s1">&#39;</span>:
+
+            <span class="nv">logger</span>.<span class="nv">debug</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">Refreshing the refresh token</span><span class="s1">&#39;</span><span class="ss">)</span>
+
+            # <span class="nv">Refresh</span> <span class="nv">token</span> <span class="nv">is</span> <span class="nv">also</span> <span class="nv">expired</span>, <span class="nv">we</span> <span class="nv">need</span> <span class="nv">to</span> <span class="nv">restart</span> <span class="nv">the</span> <span class="nv">authentication</span> <span class="nv">from</span> <span class="nv">scratch</span>
+
+            <span class="nv">self</span>.<span class="nv">get_token</span><span class="ss">()</span>
+
+        <span class="nv">elif</span> <span class="s1">&#39;</span><span class="s">access_token</span><span class="s1">&#39;</span> <span class="nv">in</span> <span class="nv">json_response</span>:
+
+            <span class="nv">self</span>.<span class="nv">access_token</span> <span class="o">=</span> <span class="nv">f</span><span class="s1">&#39;</span><span class="s">Token {json_response[&quot;access_token&quot;]}</span><span class="s1">&#39;</span>
+
+        <span class="k">else</span>:  # <span class="nv">an</span> <span class="nv">error</span> <span class="nv">occurred</span>
+
+            <span class="nv">logger</span>.<span class="nv">error</span><span class="ss">(</span><span class="nv">f</span><span class="s1">&#39;</span><span class="s">An error occurred while refreshing the refresh token, for URL: {self.url_refresh}</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+                         <span class="nv">f</span><span class="s1">&#39;</span><span class="s">response of the API: {response.text}</span><span class="s1">&#39;</span><span class="ss">)</span>
+
+            <span class="nv">raise</span> <span class="nv">ValueError</span><span class="ss">(</span><span class="nv">f</span><span class="s1">&#39;</span><span class="s">Could not refresh the token: {response.text}</span><span class="s1">&#39;</span><span class="ss">)</span>
+</code></pre></div>
+
+</details>
+<h4 id="get_token">get_token</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Generate token from user input, with email and password</p>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">get_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span class="w"></span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Generate token from user input, with email and password</span>
+
+<span class="sd">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OCD_DTL_USERNAME&#39;</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;Email: &#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OCD_DTL_PASSWORD&#39;</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">getpass</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="nb">print</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;email&#39;</span><span class="p">:</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="p">:</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">url_token</span><span class="p">,</span><span class="w"> </span><span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">json_response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">try</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="bp">self</span><span class="o">.</span><span class="n">access_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;Token {json_response[&quot;access_token&quot;]}&#39;</span><span class="w"></span>
+
+<span class="w">            </span><span class="bp">self</span><span class="o">.</span><span class="n">refresh_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;Token {json_response[&quot;refresh_token&quot;]}&#39;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">except</span><span class="w"> </span><span class="n">KeyError</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;An error occurred while retrieving an access token, for URL: {self.url_token}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="w"></span>
+
+<span class="w">                         </span><span class="n">f</span><span class="s1">&#39;response of the API: {response.text}&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">ValueError</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Could not login: {response.text}&#39;</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<h4 id="process_auth_error">process_auth_error</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">process_auth_error</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">error_msg</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Allow to update token when API response is either Missing Authorization Header or Token has expired.</p>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code>    <span class="nv">def</span> <span class="nv">process_auth_error</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">error_msg</span>: <span class="nv">str</span><span class="ss">)</span>:
+
+        <span class="s2">&quot;&quot;&quot;</span>
+
+        <span class="nv">Allow</span> <span class="nv">to</span> <span class="nv">update</span> <span class="nv">token</span> <span class="nv">when</span> <span class="nv">API</span> <span class="nv">response</span> <span class="nv">is</span> <span class="nv">either</span> <span class="nv">Missing</span> <span class="nv">Authorization</span> <span class="nv">Header</span> <span class="nv">or</span> <span class="nv">Token</span> <span class="nv">has</span> <span class="nv">expired</span>.
+
+        <span class="s2">&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="nv">error_msg</span> <span class="nv">in</span> <span class="ss">(</span>
+
+                <span class="s1">&#39;</span><span class="s">Missing Authorization Header</span><span class="s1">&#39;</span>,
+
+                <span class="s1">&#39;</span><span class="s">Bad Authorization header. Expected value \</span><span class="s1">&#39;</span><span class="nv">Token</span> <span class="o">&lt;</span><span class="nv">JWT</span><span class="o">&gt;</span>\<span class="s1">&#39;&#39;</span>
+
+        <span class="ss">)</span>:
+
+            <span class="nv">self</span>.<span class="nv">get_token</span><span class="ss">()</span>
+
+        <span class="nv">elif</span> <span class="nv">error_msg</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="s">Token has expired</span><span class="s1">&#39;</span>:
+
+            <span class="nv">self</span>.<span class="nv">fetch_new_token</span><span class="ss">()</span>
+
+        <span class="k">else</span>:
+
+            <span class="nv">raise</span> <span class="nv">ValueError</span><span class="ss">(</span><span class="nv">f</span><span class="s1">&#39;</span><span class="s">Unexpected msg: {error_msg}</span><span class="s1">&#39;</span><span class="ss">)</span>
+</code></pre></div>
+
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../throttler/" title="Throttler" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Throttler
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../utils/" title="Utils" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Utils
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Powered by
+        <a href="http://timothycrosley.github.io/portray">portray.</a>
+        You too can
+        <a href="http://timothycrosley.github.io/portray">
+          portray</a>
+        your Python project well using automatic documentation.
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+    
+  </body>
+</html>

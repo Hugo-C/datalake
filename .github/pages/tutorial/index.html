@@ -1,0 +1,1536 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Tutorial - datalakeTest</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="lightgreen">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#use-this-package-as-a-python-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="datalakeTest" class="md-header__button md-logo" aria-label="datalakeTest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            datalakeTest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Hugo-C/datalake/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    datalake
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="datalakeTest" class="md-nav__button md-logo" aria-label="datalakeTest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    datalakeTest
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Hugo-C/datalake/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    datalake
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tutorial
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-datalake" class="md-nav__link">
+    step 1: install datalake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-a-datalake-instance" class="md-nav__link">
+    step 2: Create a Datalake instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-code-sample" class="md-nav__link">
+    Usage: Code Sample
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage: Code Sample">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lookup-a-threat" class="md-nav__link">
+    Lookup a threat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-look-up" class="md-nav__link">
+    Bulk look up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-search" class="md-nav__link">
+    Bulk search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-threat-with-all-details" class="md-nav__link">
+    Add a threat (with all details)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-add-threats-at-once-atom-values-only" class="md-nav__link">
+    Bulk add threats at once (atom values only)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-tags" class="md-nav__link">
+    Add tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-score" class="md-nav__link">
+    Edit score
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-search" class="md-nav__link">
+    Advanced Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sightings" class="md-nav__link">
+    Sightings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-documentation" class="md-nav__link">
+    API documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/Add_threats/" class="md-nav__link">
+        Add Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/Bulk_lookup_threats/" class="md-nav__link">
+        Bulk Lookup Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/CONTRIBUTING/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/Edit_score/" class="md-nav__link">
+        Edit Score
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/Get_threats/" class="md-nav__link">
+        Get Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/Get_threats_from_query_hash/" class="md-nav__link">
+        Get Threats From Query Hash
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/Lookup_threats/" class="md-nav__link">
+        Lookup Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/advanced_search/" class="md-nav__link">
+        Advanced Search
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          Datalake
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Datalake" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          Datalake
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/datalake/" class="md-nav__link">
+        Datalake
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1_3" type="checkbox" id="__nav_11_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1_3">
+          Api Objects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Api Objects" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Api Objects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/api_objects/bulk_search_task/" class="md-nav__link">
+        Bulk Search Task
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/api_objects/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1_4" type="checkbox" id="__nav_11_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1_4">
+          Common
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Common" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Common
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/common/atom/" class="md-nav__link">
+        Atom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/common/atom_type/" class="md-nav__link">
+        Atom Type
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/common/config/" class="md-nav__link">
+        Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/common/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/common/logger/" class="md-nav__link">
+        Logger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/common/ouput/" class="md-nav__link">
+        Ouput
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/common/throttler/" class="md-nav__link">
+        Throttler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/common/token_manager/" class="md-nav__link">
+        Token Manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/common/utils/" class="md-nav__link">
+        Utils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/common/warn/" class="md-nav__link">
+        Warn
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1_5" type="checkbox" id="__nav_11_1_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1_5">
+          Endpoints
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Endpoints" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Endpoints
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/endpoints/advanced_search/" class="md-nav__link">
+        Advanced Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/endpoints/bulk_search/" class="md-nav__link">
+        Bulk Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/endpoints/endpoint/" class="md-nav__link">
+        Endpoint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/endpoints/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/endpoints/sightings/" class="md-nav__link">
+        Sightings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/endpoints/tags/" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/datalake/endpoints/threats/" class="md-nav__link">
+        Threats
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-datalake" class="md-nav__link">
+    step 1: install datalake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-a-datalake-instance" class="md-nav__link">
+    step 2: Create a Datalake instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-code-sample" class="md-nav__link">
+    Usage: Code Sample
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage: Code Sample">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lookup-a-threat" class="md-nav__link">
+    Lookup a threat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-look-up" class="md-nav__link">
+    Bulk look up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-search" class="md-nav__link">
+    Bulk search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-threat-with-all-details" class="md-nav__link">
+    Add a threat (with all details)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-add-threats-at-once-atom-values-only" class="md-nav__link">
+    Bulk add threats at once (atom values only)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-tags" class="md-nav__link">
+    Add tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-score" class="md-nav__link">
+    Edit score
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-search" class="md-nav__link">
+    Advanced Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sightings" class="md-nav__link">
+    Sightings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-documentation" class="md-nav__link">
+    API documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Hugo-C/datalake/edit/main/tutorial.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <div class="codehilite"><pre><span></span><code> ____        <span class="ge">_        _</span>       <span class="ge">_         </span>
+<span class="ge">|  _</span> \  __ <span class="ge">_| |_</span> __ _| | __ _| | _____  
+| | | |/ _` | __/ <span class="ge">_` | |/ _</span>` | |/ / <span class="ge">_ \ </span>
+<span class="ge">| |_</span>| | (_| | || (_| | | (_| |   &lt;  __/  
+|____/ \__,_|\__\__,_|_|\__,_|_|\_\___|
+</code></pre></div>
+
+<h1 id="use-this-package-as-a-python-library">Use this package as a Python library</h1>
+<p>Using this library has multiple advantages, it first allows you to get started more quickly than by using the API
+directly.
+The library is also maintained directly by the developers of Datalake thus reducing the burden of keeping it compatible
+with the API over time.
+Finally, as it is open-source, you can reuse the functionalities developed by other Datalake users as well as helps
+improve this package further yourself.</p>
+<h3 id="step-1-install-datalake">step 1: install datalake</h3>
+<p>With Python 3.6+:</p>
+<div class="codehilite"><pre><span></span><code>$ pip install datalake-scripts
+or
+$ pip3 install datalake-scripts
+</code></pre></div>
+
+<h3 id="step-2-create-a-datalake-instance">step 2: Create a Datalake instance</h3>
+<p>You will need to create a Datalake instance once and reuse it:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The credentials can be omitted and will then be asked in a prompt.<br />
+You can also set them in your os environment variables:</p>
+<ul>
+<li><code>OCD_DTL_USERNAME</code> email address used to login on Datalake API/GUI.</li>
+<li><code>OCD_DTL_PASSWORD</code> password used to login on Datalake API/GUI.</li>
+</ul>
+<h2 id="usage-code-sample">Usage: Code Sample</h2>
+<p>Below are some examples to get you started</p>
+<ul>
+<li><a href="#lookup-a-threat">Lookup a threat</a></li>
+<li><a href="#bulk-look-up">Bulk look up</a></li>
+<li><a href="#bulk-search">Bulk search</a></li>
+<li><a href="#add-a-threat-with-all-details">Add a threat (with all details)</a></li>
+<li><a href="#bulk-add-threats-at-once-atom-values-only">Bulk add threats at once (atom values only)</a></li>
+<li><a href="#add-tags">Add tags</a></li>
+<li><a href="#edit-score">Edit score</a></li>
+<li><a href="#advanced-search">Advanced Search</a></li>
+<li><a href="#sightings">Sightings</a></li>
+</ul>
+<h3 id="lookup-a-threat">Lookup a threat</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span><span class="p">,</span> <span class="n">AtomType</span><span class="p">,</span> <span class="n">Output</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+<span class="n">dtl</span><span class="o">.</span><span class="n">Threats</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span>
+    <span class="n">atom_value</span><span class="o">=</span><span class="s1">&#39;mayoclinic.org&#39;</span><span class="p">,</span>
+    <span class="n">atom_type</span><span class="o">=</span><span class="n">AtomType</span><span class="o">.</span><span class="n">DOMAIN</span><span class="p">,</span>
+    <span class="n">hashkey_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">output</span><span class="o">=</span><span class="n">Output</span><span class="o">.</span><span class="n">JSON</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Note that only the atom_value is required:</p>
+<div class="codehilite"><pre><span></span><code>dtl.Threats.lookup(&#39;mayoclinic.org&#39;)
+</code></pre></div>
+
+<h3 id="bulk-look-up">Bulk look up</h3>
+<p>Compared to the lookup, the bulk_lookup method allows to lookup big batch of values faster as fewer API calls are
+made.<br />
+However, fewer outputs types are supported (only json and csv as of now).</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span><span class="p">,</span> <span class="n">AtomType</span><span class="p">,</span> <span class="n">Output</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+
+<span class="n">threats</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;mayoclinic.org&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;commentcamarche.net&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;gawker.com&#39;</span>
+<span class="p">]</span>
+
+<span class="n">dtl</span><span class="o">.</span><span class="n">Threats</span><span class="o">.</span><span class="n">bulk_lookup</span><span class="p">(</span>
+    <span class="n">atom_values</span><span class="o">=</span><span class="n">threats</span><span class="p">,</span>
+    <span class="n">atom_type</span><span class="o">=</span><span class="n">AtomType</span><span class="o">.</span><span class="n">DOMAIN</span><span class="p">,</span>
+    <span class="n">hashkey_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">output</span><span class="o">=</span><span class="n">Output</span><span class="o">.</span><span class="n">CSV</span><span class="p">,</span>
+    <span class="n">return_search_hashkey</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<h3 id="bulk-search">Bulk search</h3>
+<p>A convenient download_sync method is provided:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">task</span> <span class="o">=</span> <span class="n">dtl</span><span class="o">.</span><span class="n">BulkSearch</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">query_hash</span><span class="o">=</span><span class="s1">&#39;&lt;some query hash&gt;&#39;</span><span class="p">)</span>
+<span class="n">csv</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">download_sync</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="n">Output</span><span class="o">.</span><span class="n">CSV</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The following Output format are available:</p>
+<ul>
+<li>JSON</li>
+<li>JSON_ZIP</li>
+<li>CSV</li>
+<li>CSV_ZIP</li>
+<li>STIX</li>
+<li>STIX_ZIP</li>
+</ul>
+<p>The STIX and STIX_ZIP format are <strong>only</strong> available if when creating the task it is specified that it is for stix
+export, using the <code>for_stix_export</code> parameter</p>
+<div class="codehilite"><pre><span></span><code><span class="n">task</span> <span class="o">=</span> <span class="n">dtl</span><span class="o">.</span><span class="n">BulkSearch</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">for_stix_export</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">query_hash</span><span class="o">=</span><span class="s1">&#39;&lt;some query hash&gt;&#39;</span><span class="p">)</span>
+<span class="n">stix</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">download_sync</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="n">Output</span><span class="o">.</span><span class="n">STIX</span><span class="p">)</span>
+</code></pre></div>
+
+<blockquote>
+<p><strong>Note</strong><br />
+<code>download_sync</code> accepts a <code>stream=True</code> parameter that if passed change the return of the function. It is no longer the plain response body but the <code>Response</code> object from the <code>requests</code> library. This allow to retrieve the plain body as a stream.<br />
+<code>task.download_sync_stream_to_file('&lt;absolute output path&gt;', output=Output.JSON)</code> is a helper function that do just that, storing the output in a file while keeping the RAM usage low and independent of the size of the bulksearch result.</p>
+</blockquote>
+<p>Depending of your use case, you can call an async version to parallelize the wait of bulk search for example:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span><span class="p">,</span> <span class="n">Output</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+
+<span class="c1"># Queuing multiple bulk searches at once saves a lot of time</span>
+<span class="c1"># However you will receive HTTP 400 error if you try to enqueue too many bulk search at once (more than 10)</span>
+<span class="n">query_hashes_to_process</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;7018d41944b71b04a9d3785b3741c842&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;207d02c81edde3c87f665451f04f9bd1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;9f7a8fecb0a74e508d6873c4d6e0d614&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;8bd8f1b47ce1a76ac2a1dc9e91aa9a5e&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;d3f8e2006554aaffa554714c614acd30&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">coroutines</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">query_hash</span> <span class="ow">in</span> <span class="n">query_hashes_to_process</span><span class="p">:</span>
+    <span class="n">task</span> <span class="o">=</span> <span class="n">dtl</span><span class="o">.</span><span class="n">BulkSearch</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">query_hash</span><span class="o">=</span><span class="n">query_hash</span><span class="p">)</span>
+    <span class="n">coroutines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">download_async</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="n">Output</span><span class="o">.</span><span class="n">JSON</span><span class="p">))</span>
+
+<span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
+<span class="n">future</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">coroutines</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">future</span><span class="p">)</span>
+
+<span class="n">result_per_query_hash</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Since results keep its order, we can easily attach back query_hash to its result</span>
+<span class="k">for</span> <span class="n">query_hash</span><span class="p">,</span> <span class="n">result</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">query_hashes_to_process</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+    <span class="n">result_per_query_hash</span><span class="p">[</span><span class="n">query_hash</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_per_query_hash</span><span class="p">)</span>
+
+<span class="c1"># will output:</span>
+<span class="p">{</span>
+    <span class="s2">&quot;query_hash_1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;result of query_hash 1&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;query_hash_2&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;result of query_hash 2&quot;</span><span class="p">},</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="add-a-threat-with-all-details">Add a threat (with all details)</h3>
+<p>You can call the <code>add_threat</code> function to add a single threat at a time and retrieve details from the newly submitted
+threat.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span>
+<span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">ThreatType</span><span class="p">,</span> <span class="n">OverrideType</span><span class="p">,</span> <span class="n">IpAtom</span><span class="p">,</span> <span class="n">EmailAtom</span><span class="p">,</span> <span class="n">FileAtom</span><span class="p">,</span> <span class="n">Hashes</span><span class="p">,</span> <span class="n">EmailFlow</span><span class="p">,</span> <span class="n">IpService</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding empty file</span>
+<span class="n">hashes</span> <span class="o">=</span> <span class="n">Hashes</span><span class="p">(</span><span class="n">md5</span><span class="o">=</span><span class="s1">&#39;d41d8cd98f00b204e9800998ecf8427e&#39;</span><span class="p">,</span> <span class="n">sha1</span><span class="o">=</span><span class="s1">&#39;da39a3ee5e6b4b0d3255bfef95601890afd80709&#39;</span><span class="p">,</span>
+                <span class="n">sha256</span><span class="o">=</span><span class="s1">&#39;e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855&#39;</span><span class="p">)</span>
+<span class="n">empty_file</span> <span class="o">=</span> <span class="n">FileAtom</span><span class="p">(</span><span class="n">hashes</span><span class="o">=</span><span class="n">hashes</span><span class="p">,</span> <span class="n">filesize</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">filetype</span><span class="o">=</span><span class="s1">&#39;txt&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;empty.txt&#39;</span><span class="p">,</span>
+                      <span class="n">external_analysis_link</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;https://www.computerhope.com/issues/ch001314.htm&#39;</span><span class="p">])</span>
+
+<span class="n">dtl</span><span class="o">.</span><span class="n">Threats</span><span class="o">.</span><span class="n">add_threat</span><span class="p">(</span><span class="n">atom</span><span class="o">=</span><span class="n">empty_file</span><span class="p">,</span> <span class="n">threat_types</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;threat_type&#39;</span><span class="p">:</span> <span class="n">ThreatType</span><span class="o">.</span><span class="n">MALWARE</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}],</span>
+                       <span class="n">override_type</span><span class="o">=</span><span class="n">OverrideType</span><span class="o">.</span><span class="n">TEMPORARY</span><span class="p">,</span>
+                       <span class="n">public</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;empty_file&#39;</span><span class="p">])</span>
+<span class="c1"># Adding Google DNS IP</span>
+<span class="n">dns_service</span> <span class="o">=</span> <span class="n">IpService</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">53</span><span class="p">,</span> <span class="n">service_name</span><span class="o">=</span><span class="s1">&#39;dns&#39;</span><span class="p">,</span> <span class="n">application</span><span class="o">=</span><span class="s1">&#39;dns&#39;</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="s1">&#39;UDP&#39;</span><span class="p">)</span>
+<span class="n">google_dns_ip</span> <span class="o">=</span> <span class="n">IpAtom</span><span class="p">(</span><span class="n">ip_address</span><span class="o">=</span><span class="s1">&#39;52.48.79.33&#39;</span><span class="p">,</span>
+                       <span class="n">external_analysis_link</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;https://www.virustotal.com/gui/ip-address/8.8.8.8&#39;</span><span class="p">],</span> <span class="n">ip_version</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                       <span class="n">services</span><span class="o">=</span><span class="p">[</span><span class="n">dns_service</span><span class="p">],</span> <span class="n">owner</span><span class="o">=</span><span class="s1">&#39;Google&#39;</span><span class="p">)</span>
+
+<span class="n">dtl</span><span class="o">.</span><span class="n">Threats</span><span class="o">.</span><span class="n">add_threat</span><span class="p">(</span><span class="n">atom</span><span class="o">=</span><span class="n">google_dns_ip</span><span class="p">,</span> <span class="n">threat_types</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;threat_type&#39;</span><span class="p">:</span> <span class="n">ThreatType</span><span class="o">.</span><span class="n">MALWARE</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}],</span>
+                       <span class="n">override_type</span><span class="o">=</span><span class="n">OverrideType</span><span class="o">.</span><span class="n">TEMPORARY</span><span class="p">,</span>
+                       <span class="n">public</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;google_dns&#39;</span><span class="p">])</span>
+<span class="c1"># Addding e-mail</span>
+<span class="n">my_email</span> <span class="o">=</span> <span class="n">EmailAtom</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s1">&#39;noreply@orangecyberdefense.com&#39;</span><span class="p">,</span> <span class="n">email_flow</span><span class="o">=</span><span class="n">EmailFlow</span><span class="o">.</span><span class="n">FROM</span><span class="p">,</span>
+                     <span class="n">external_analysis_link</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;https://www.orangecyberdefense.com&#39;</span><span class="p">])</span>
+
+<span class="n">dtl</span><span class="o">.</span><span class="n">Threats</span><span class="o">.</span><span class="n">add_threat</span><span class="p">(</span><span class="n">atom</span><span class="o">=</span><span class="n">my_email</span><span class="p">,</span> <span class="n">threat_types</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;threat_type&#39;</span><span class="p">:</span> <span class="n">ThreatType</span><span class="o">.</span><span class="n">SPAM</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}],</span>
+                       <span class="n">override_type</span><span class="o">=</span><span class="n">OverrideType</span><span class="o">.</span><span class="n">TEMPORARY</span><span class="p">,</span> <span class="n">whitelist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                       <span class="n">public</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ocd&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<p>The following positional arguments are required:</p>
+<ul>
+<li><code>atom</code>: an instance of an Atom class, for example <code>IpAtom</code></li>
+</ul>
+<p>The following keyword arguments are available:</p>
+<ul>
+<li><code>threat_types</code>: A list of dictionaries containing a key named <code>threat_type</code> with a <code>ThreatType</code> value and a key
+  named <code>score</code> with an integer value between <strong>0</strong> and <strong>100</strong>. Available ThreatType options are: <strong>DDOS, FRAUD, HACK,
+  LEAK, MALWARE, PHISHING, SCAM, SCAN, SPAM</strong>. Defaults to <code>None</code>.</li>
+<li><code>override_type</code>: an OverrideType. Available options are:<ul>
+<li><code>PERMANENT</code>: All values will override any values provided by both newer and
+  older IOCs. Newer IOCs with override_type permanent can still override old permanent changes.</li>
+<li><code>TEMPORARY</code>: All values should override any values provided by older IOCs,
+  but not newer ones.</li>
+<li><code>LOCK</code>: Will act like a permanent for three months,
+  then like a temporary.</li>
+</ul>
+</li>
+<li><code>whitelist</code>: A boolean, if no <code>threat_types</code> are provided, this argument should be set to true. All score values will
+  then be set to 0. If <code>threat_types</code> are provided along with <code>whitelist</code> set as <code>True</code>, will result in an error.
+  Defaults to <code>False</code>.</li>
+<li><code>public</code>: A boolean, sets whether the threats should be public or private. Defaults to <code>True</code>.</li>
+<li><code>tags</code>: a List of strings. Will set the tags of the added threat(s).</li>
+</ul>
+<h3 id="bulk-add-threats-at-once-atom-values-only">Bulk add threats at once (atom values only)</h3>
+<p>You can call the <code>add_threats</code> function to add threats in bulk but you wil b</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span><span class="p">,</span> <span class="n">ThreatType</span><span class="p">,</span> <span class="n">OverrideType</span><span class="p">,</span> <span class="n">AtomType</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+<span class="n">atom_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;12.34.56.78&#39;</span><span class="p">,</span> <span class="s1">&#39;9.8.7.6&#39;</span><span class="p">]</span>
+<span class="n">threat_types</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;threat_type&#39;</span><span class="p">:</span> <span class="n">ThreatType</span><span class="o">.</span><span class="n">DDOS</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}]</span>
+<span class="n">dtl</span><span class="o">.</span><span class="n">Threats</span><span class="o">.</span><span class="n">add_threats</span><span class="p">(</span><span class="n">atom_list</span><span class="p">,</span> <span class="n">AtomType</span><span class="o">.</span><span class="n">IP</span><span class="p">,</span> <span class="n">threat_types</span><span class="p">,</span> <span class="n">OverrideType</span><span class="o">.</span><span class="n">TEMPORARY</span><span class="p">,</span>
+                        <span class="n">external_analysis_link</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;https://someurl.com&#39;</span><span class="p">],</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;some_tag&#39;</span><span class="p">],</span> <span class="n">public</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The following positional arguments are required:</p>
+<ul>
+<li><code>atom_list</code>: a List of strings. Contains the list of threats to add. In our example it's a list of IPs.</li>
+<li><code>atom_type</code>: an AtomType. Available options are: <strong>APK, AS, CC, CRYPTO, CVE, DOMAIN, EMAIL, FILE, FQDN, IBAN, IP,
+  IP_RANGE, PATE, PHONE_NUMBER, REGKEY, SSL, URL</strong></li>
+</ul>
+<p>The following keyword arguments are available:</p>
+<ul>
+<li><code>threat_types</code>: A list of dictionaries containing a key named <code>threat_type</code> with a <code>ThreatType</code> value and a key
+  named <code>score</code> with an integer value between <strong>0</strong> and <strong>100</strong>. Available ThreatType options are: <strong>DDOS, FRAUD, HACK,
+  LEAK, MALWARE, PHISHING, SCAM, SCAN, SPAM</strong>. Defaults to <code>None</code>.</li>
+<li><code>override_type</code>: an OverrideType. Available options are:<ul>
+<li><code>PERMANENT</code>: All values will override any values provided by both newer and
+  older IOCs. Newer IOCs with override_type permanent can still override old permanent changes.</li>
+<li><code>TEMPORARY</code>: All values should override any values provided by older IOCs,
+  but not newer ones.</li>
+<li><code>LOCK</code>: Will act like a permanent for three months,
+  then like a temporary.</li>
+</ul>
+</li>
+<li><code>whitelist</code>: A boolean, if no <code>threat_types</code> are provided, this argument should be set to true. All score values will
+  then be set to 0. If <code>threat_types</code> are provided along with <code>whitelist</code> set as <code>True</code>, will result in an error.
+  Defaults to <code>False</code>.</li>
+<li><code>public</code>: A boolean, sets whether the threats should be public or private. Defaults to <code>True</code>.</li>
+<li><code>tags</code>: a List of strings. Will set the tags of the added threat(s).</li>
+<li><code>external_analysis_link</code>: a List of strings. A link to an external resource providing more information about the
+  threat.</li>
+</ul>
+<h3 id="add-tags">Add tags</h3>
+<p>A quick and easy way to add tags to a threat</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+<span class="n">hashkey</span> <span class="o">=</span> <span class="s1">&#39;00000001655688982ec8ba4058f02dd1&#39;</span>
+<span class="n">tags</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">]</span>
+<span class="n">public</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">dtl</span><span class="o">.</span><span class="n">Tags</span><span class="o">.</span><span class="n">add_to_threat</span><span class="p">(</span><span class="n">hashkey</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">public</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="edit-score">Edit score</h3>
+<p>Mutliple threats can be edited at once, each threat type independently:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span><span class="p">,</span> <span class="n">ThreatType</span><span class="p">,</span> <span class="n">OverrideType</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+<span class="n">hashkeys</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;00000001655688982ec8ba4058f02dd1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;00000001655688982ec8ba4058f02dd2&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">threat_scores_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;threat_type&#39;</span><span class="p">:</span> <span class="n">ThreatType</span><span class="o">.</span><span class="n">DDOS</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;threat_type&#39;</span><span class="p">:</span> <span class="n">ThreatType</span><span class="o">.</span><span class="n">PHISHING</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span>
+<span class="p">]</span>
+<span class="n">override_type</span> <span class="o">=</span> <span class="n">OverrideType</span><span class="o">.</span><span class="n">TEMPORARY</span>
+
+<span class="n">dtl</span><span class="o">.</span><span class="n">Threats</span><span class="o">.</span><span class="n">edit_score_by_hashkeys</span><span class="p">(</span><span class="n">hashkeys</span><span class="p">,</span> <span class="n">threat_scores_list</span><span class="p">,</span> <span class="n">override_type</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Query hashes can also be used with another function provided for that use:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span><span class="p">,</span> <span class="n">ThreatType</span><span class="p">,</span> <span class="n">OverrideType</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+<span class="n">query_body_hash</span> <span class="o">=</span> <span class="s1">&#39;7018d41944b71b04a9d3785b3741c842&#39;</span>
+<span class="n">threat_scores_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;threat_type&#39;</span><span class="p">:</span> <span class="n">ThreatType</span><span class="o">.</span><span class="n">DDOS</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;threat_type&#39;</span><span class="p">:</span> <span class="n">ThreatType</span><span class="o">.</span><span class="n">PHISHING</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span>
+<span class="p">]</span>
+<span class="n">override_type</span> <span class="o">=</span> <span class="n">OverrideType</span><span class="o">.</span><span class="n">TEMPORARY</span>
+
+<span class="n">dtl</span><span class="o">.</span><span class="n">Threats</span><span class="o">.</span><span class="n">edit_score_by_query_body_hash</span><span class="p">(</span><span class="n">query_body_hash</span><span class="p">,</span> <span class="n">threat_scores_list</span><span class="p">,</span> <span class="n">override_type</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="advanced-search">Advanced Search</h3>
+<p>The library can be used to execute advanced search if you have a query hash or a query to body,
+using <code>advanced_search_from_query_hash</code> or <code>advanced_search_from_query_body</code>  .</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span><span class="p">,</span> <span class="n">Output</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+<span class="n">query_body</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;AND&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;AND&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;atom_type&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;multi_values&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;ip&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;filter&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;risk&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;range&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;gt&quot;</span><span class="p">:</span> <span class="mi">60</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;filter&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+<span class="n">query_hash</span> <span class="o">=</span> <span class="s1">&#39;cece3117abc823cee81e69c2143e6268&#39;</span>
+
+<span class="n">adv_search_hash_resp</span> <span class="o">=</span> <span class="n">dtl</span><span class="o">.</span><span class="n">AdvancedSearch</span><span class="o">.</span><span class="n">advanced_search_from_query_hash</span><span class="p">(</span><span class="n">query_hash</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
+                                                                          <span class="n">ordering</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;first_seen&#39;</span><span class="p">],</span> <span class="n">output</span><span class="o">=</span><span class="n">Output</span><span class="o">.</span><span class="n">JSON</span><span class="p">)</span>
+
+<span class="n">adv_search_body_resp</span> <span class="o">=</span> <span class="n">dtl</span><span class="o">.</span><span class="n">AdvancedSearch</span><span class="o">.</span><span class="n">advanced_search_from_query_body</span><span class="p">(</span><span class="n">query_body</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
+                                                                          <span class="n">ordering</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-first_seen&#39;</span><span class="p">],</span> <span class="n">output</span><span class="o">=</span><span class="n">Output</span><span class="o">.</span><span class="n">JSON</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="sightings">Sightings</h3>
+<p>Sightings can be submitted using the library using a list of atoms:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span><span class="p">,</span> <span class="n">IpAtom</span><span class="p">,</span> <span class="n">EmailAtom</span><span class="p">,</span> <span class="n">UrlAtom</span><span class="p">,</span> <span class="n">FileAtom</span><span class="p">,</span> <span class="n">Hashes</span><span class="p">,</span> <span class="n">SightingType</span><span class="p">,</span> <span class="n">Visibility</span><span class="p">,</span> <span class="n">ThreatType</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+
+<span class="c1"># building atoms</span>
+<span class="n">hashes</span> <span class="o">=</span> <span class="n">Hashes</span><span class="p">(</span><span class="n">md5</span><span class="o">=</span><span class="s1">&#39;d41d8cd98f00b204e9800998ecf8427e&#39;</span><span class="p">,</span> <span class="n">sha1</span><span class="o">=</span><span class="s1">&#39;da39a3ee5e6b4b0d3255bfef95601890afd80709&#39;</span><span class="p">,</span>
+                <span class="n">sha256</span><span class="o">=</span><span class="s1">&#39;e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855&#39;</span><span class="p">)</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">FileAtom</span><span class="p">(</span><span class="n">hashes</span><span class="o">=</span><span class="n">hashes</span><span class="p">)</span>
+<span class="n">ip1</span> <span class="o">=</span> <span class="n">IpAtom</span><span class="p">(</span><span class="s1">&#39;52.48.79.33&#39;</span><span class="p">)</span>
+<span class="n">em1</span> <span class="o">=</span> <span class="n">EmailAtom</span><span class="p">(</span><span class="s1">&#39;hacker@hacker.ha&#39;</span><span class="p">)</span>
+<span class="n">url1</span> <span class="o">=</span> <span class="n">UrlAtom</span><span class="p">(</span><span class="s1">&#39;http://notfishing.com&#39;</span><span class="p">)</span>
+
+<span class="n">threat_types</span> <span class="o">=</span> <span class="p">[</span><span class="n">ThreatType</span><span class="o">.</span><span class="n">PHISHING</span><span class="p">,</span> <span class="n">ThreatType</span><span class="o">.</span><span class="n">SCAM</span><span class="p">]</span>
+<span class="c1"># building sighting timestamps </span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
+
+<span class="c1"># submit sighting</span>
+<span class="n">dtl</span><span class="o">.</span><span class="n">Sightings</span><span class="o">.</span><span class="n">submit_sighting</span><span class="p">(</span><span class="n">start_timestamp</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> <span class="n">end_timestamp</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">sighting_type</span><span class="o">=</span><span class="n">SightingType</span><span class="o">.</span><span class="n">POSITIVE</span><span class="p">,</span>
+                              <span class="n">visibility</span><span class="o">=</span><span class="n">Visibility</span><span class="o">.</span><span class="n">PUBLIC</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">threat_types</span><span class="o">=</span><span class="n">threat_types</span><span class="p">,</span>
+                              <span class="n">atoms</span><span class="o">=</span><span class="p">[</span><span class="n">ip1</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">em1</span><span class="p">,</span> <span class="n">url1</span><span class="p">],</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;some_tag&#39;</span><span class="p">],</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;some_description&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Or using a list of hashkeys:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datalake</span> <span class="kn">import</span> <span class="n">Datalake</span><span class="p">,</span> <span class="n">SightingType</span><span class="p">,</span> <span class="n">Visibility</span><span class="p">,</span> <span class="n">ThreatType</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">threat_types</span> <span class="o">=</span> <span class="p">[</span><span class="n">ThreatType</span><span class="o">.</span><span class="n">PHISHING</span><span class="p">,</span> <span class="n">ThreatType</span><span class="o">.</span><span class="n">SCAM</span><span class="p">]</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
+
+<span class="n">dtl</span> <span class="o">=</span> <span class="n">Datalake</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">dtl</span><span class="o">.</span><span class="n">Sightings</span><span class="o">.</span><span class="n">submit_sighting</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">SightingType</span><span class="o">.</span><span class="n">POSITIVE</span><span class="p">,</span> <span class="n">Visibility</span><span class="o">.</span><span class="n">PUBLIC</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">threat_types</span><span class="p">,</span>
+                                     <span class="n">hashkeys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mythreathashkeys&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<p>The atom_type file provides multiple classes to build each type of atom type used by the API. The classes will provide
+you with hints on the value expected for each atom_type, most of which aren't mandatory.
+For sightings, we won't use most of the fields. You can verify the fields that are used for sighting in the docstrings
+of each class, inside your editor.</p>
+<h3 id="api-documentation">API documentation</h3>
+<p>For more information on the API used by this library,
+see <a href="https://datalake.cert.orangecyberdefense.com/api/v2/docs/">the documentation</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../docs/Add_threats/" title="Add Threats" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Add Threats
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Powered by
+        <a href="http://timothycrosley.github.io/portray">portray.</a>
+        You too can
+        <a href="http://timothycrosley.github.io/portray">
+          portray</a>
+        your Python project well using automatic documentation.
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+    
+  </body>
+</html>

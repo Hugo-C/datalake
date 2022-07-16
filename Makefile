@@ -5,6 +5,8 @@ clean:
 	@echo "Removed dist folder"
 test:
 	@pytest $$path
+doc:
+    portray as_html -o .github/pages/ --overwrite -m datalake
 deploy_test: clean build_release
 	python3 -m twine upload --repository testpypi dist/*
 deploy_prod: clean build_release

@@ -1,0 +1,1623 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Endpoint - datalakeTest</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="lightgreen">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-datalakeendpointsendpoint" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="datalakeTest" class="md-header__button md-logo" aria-label="datalakeTest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            datalakeTest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Endpoint
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Hugo-C/datalake/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    datalake
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="datalakeTest" class="md-nav__button md-logo" aria-label="datalakeTest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    datalakeTest
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Hugo-C/datalake/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    datalake
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorial/" class="md-nav__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Add_threats/" class="md-nav__link">
+        Add Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Bulk_lookup_threats/" class="md-nav__link">
+        Bulk Lookup Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/CONTRIBUTING/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Edit_score/" class="md-nav__link">
+        Edit Score
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Get_threats/" class="md-nav__link">
+        Get Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Get_threats_from_query_hash/" class="md-nav__link">
+        Get Threats From Query Hash
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/Lookup_threats/" class="md-nav__link">
+        Lookup Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docs/advanced_search/" class="md-nav__link">
+        Advanced Search
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          Datalake
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Datalake" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          Datalake
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datalake/" class="md-nav__link">
+        Datalake
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1_3" type="checkbox" id="__nav_11_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1_3">
+          Api Objects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Api Objects" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Api Objects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_objects/bulk_search_task/" class="md-nav__link">
+        Bulk Search Task
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_objects/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1_4" type="checkbox" id="__nav_11_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1_4">
+          Common
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Common" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Common
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/atom/" class="md-nav__link">
+        Atom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/atom_type/" class="md-nav__link">
+        Atom Type
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/config/" class="md-nav__link">
+        Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/logger/" class="md-nav__link">
+        Logger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/ouput/" class="md-nav__link">
+        Ouput
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/throttler/" class="md-nav__link">
+        Throttler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/token_manager/" class="md-nav__link">
+        Token Manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/utils/" class="md-nav__link">
+        Utils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../common/warn/" class="md-nav__link">
+        Warn
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1_5" type="checkbox" id="__nav_11_1_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1_5">
+          Endpoints
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Endpoints" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Endpoints
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced_search/" class="md-nav__link">
+        Advanced Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bulk_search/" class="md-nav__link">
+        Bulk Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Endpoint
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Endpoint
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    Endpoint
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descendants" class="md-nav__link">
+    Descendants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datalake_requests" class="md-nav__link">
+    datalake_requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sightings/" class="md-nav__link">
+        Sightings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags/" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threats/" class="md-nav__link">
+        Threats
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    Endpoint
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descendants" class="md-nav__link">
+    Descendants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datalake_requests" class="md-nav__link">
+    datalake_requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Hugo-C/datalake/edit/main/reference/datalake/endpoints/endpoint.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="module-datalakeendpointsendpoint">Module datalake.endpoints.endpoint</h1>
+<p>Base class used by all endpoints to request the API</p>
+<p>None</p>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">Base class used by all endpoints to request the API</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urljoin</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="kn">from</span> <span class="nn">requests</span> <span class="kn">import</span> <span class="n">Response</span>
+
+<span class="kn">from</span> <span class="nn">datalake.common.ouput</span> <span class="kn">import</span> <span class="n">Output</span>
+
+<span class="kn">from</span> <span class="nn">datalake.common.logger</span> <span class="kn">import</span> <span class="n">logger</span>
+
+<span class="kn">from</span> <span class="nn">datalake.common.throttler</span> <span class="kn">import</span> <span class="n">throttle</span>
+
+<span class="kn">from</span> <span class="nn">datalake.common.token_manager</span> <span class="kn">import</span> <span class="n">TokenManager</span>
+
+<span class="k">class</span> <span class="nc">Endpoint</span><span class="p">:</span>
+
+    <span class="n">OCD_DTL_QUOTA_TIME</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OCD_DTL_QUOTA_TIME&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">OCD_DTL_REQUESTS_PER_QUOTA_TIME</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OCD_DTL_REQUESTS_PER_QUOTA_TIME&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Throttle selected: </span><span class="si">{</span><span class="n">OCD_DTL_REQUESTS_PER_QUOTA_TIME</span><span class="si">}</span><span class="s1"> queries per </span><span class="si">{</span><span class="n">OCD_DTL_QUOTA_TIME</span><span class="si">}</span><span class="s1">s&#39;</span><span class="p">)</span>
+
+    <span class="n">SET_MAX_RETRY</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint_config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">environment</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">token_manager</span><span class="p">:</span> <span class="n">TokenManager</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">endpoint_config</span> <span class="o">=</span> <span class="n">endpoint_config</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="n">environment</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">terminal_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_terminal_size</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">token_manager</span> <span class="o">=</span> <span class="n">token_manager</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">SET_MAX_RETRY</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="nd">@staticmethod</span>
+
+    <span class="k">def</span> <span class="nf">_get_terminal_size</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+
+        <span class="sd">&quot;&quot;&quot;Return the terminal size for pretty print&quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+
+            <span class="n">terminal_size</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">get_terminal_size</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">terminal_size</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+
+                <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">terminal_size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Couldn&#39;t get terminal size, falling back to 80 char wide&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="mi">80</span>
+
+    <span class="nd">@throttle</span><span class="p">(</span>
+
+        <span class="n">period</span><span class="o">=</span><span class="n">OCD_DTL_QUOTA_TIME</span><span class="p">,</span>
+
+        <span class="n">call_per_period</span><span class="o">=</span><span class="n">OCD_DTL_REQUESTS_PER_QUOTA_TIME</span><span class="p">,</span>
+
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">datalake_requests</span><span class="p">(</span>
+
+            <span class="bp">self</span><span class="p">,</span>
+
+            <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+
+            <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+
+            <span class="n">headers</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+
+            <span class="n">post_body</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+
+            <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Use it to request the API</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">tries_left</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">SET_MAX_RETRY</span>
+
+        <span class="k">while</span> <span class="n">tries_left</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+
+            <span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Authorization&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">token_manager</span><span class="o">.</span><span class="n">access_token</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pretty_debug_request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">post_body</span><span class="p">,</span> <span class="n">headers</span><span class="p">))</span>
+
+            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">post_body</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">logger</span><span class="o">.</span><span class="n">isEnabledFor</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">):</span>
+
+                <span class="c1"># Don&#39;t compute response.text var if not needed, especially for streaming response</span>
+
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;API response:</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">401</span><span class="p">:</span>
+
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Token expired or Missing authorization header. Updating token&#39;</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">token_manager</span><span class="o">.</span><span class="n">process_auth_error</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;messages&#39;</span><span class="p">))</span>
+
+            <span class="k">elif</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">422</span><span class="p">:</span>
+
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Bad authorization header. Updating token&#39;</span><span class="p">)</span>
+
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;422 HTTP code: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">token_manager</span><span class="o">.</span><span class="n">process_auth_error</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;messages&#39;</span><span class="p">))</span>
+
+            <span class="k">elif</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&lt;</span> <span class="mi">200</span> <span class="ow">or</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&gt;</span> <span class="mi">299</span><span class="p">:</span>
+
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+
+                    <span class="sa">f</span><span class="s1">&#39;API returned non 2xx response code : </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="se">\n</span><span class="s1"> Retrying&#39;</span>
+
+                <span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+
+                <span class="k">return</span> <span class="n">response</span>
+
+            <span class="n">tries_left</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Request failed&#39;</span><span class="p">)</span>
+
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+
+    <span class="k">def</span> <span class="nf">_post_headers</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="n">Output</span><span class="o">.</span><span class="n">JSON</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+
+        <span class="sd">&quot;&quot;&quot;headers for POST endpoints&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="n">output</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">}</span>
+
+    <span class="nd">@staticmethod</span>
+
+    <span class="k">def</span> <span class="nf">_get_headers</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="n">Output</span><span class="o">.</span><span class="n">JSON</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+
+        <span class="sd">&quot;&quot;&quot;headers for GET endpoints&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="n">output</span><span class="o">.</span><span class="n">value</span><span class="p">}</span>
+
+    <span class="nd">@staticmethod</span>
+
+    <span class="k">def</span> <span class="nf">_send_request</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Send the correct http request to url from method [get, post, delete, patch, put].</span>
+
+<span class="sd">        Raise a TypeError &#39;Unknown method to requests {method}&#39; when the method is not one of the above.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">common_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+
+            <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span>
+
+            <span class="s1">&#39;headers&#39;</span><span class="p">:</span> <span class="n">headers</span><span class="p">,</span>
+
+            <span class="s1">&#39;stream&#39;</span><span class="p">:</span> <span class="n">stream</span><span class="p">,</span>
+
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;get&#39;</span><span class="p">:</span>
+
+            <span class="n">api_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">**</span><span class="n">common_kwargs</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;post&#39;</span><span class="p">:</span>
+
+            <span class="n">api_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="o">**</span><span class="n">common_kwargs</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+        <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;delete&#39;</span><span class="p">:</span>
+
+            <span class="n">api_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="o">**</span><span class="n">common_kwargs</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+        <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;patch&#39;</span><span class="p">:</span>
+
+            <span class="n">api_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="o">**</span><span class="n">common_kwargs</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+        <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;put&#39;</span><span class="p">:</span>
+
+            <span class="n">api_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">**</span><span class="n">common_kwargs</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;ERROR : Wrong requests, please only do [get, post, put, patch, delete] method&#39;</span><span class="p">)</span>
+
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Unknown method to requests </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">api_response</span>
+
+    <span class="k">def</span> <span class="nf">_pretty_debug_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+
+        <span class="n">debug</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">terminal_size</span> <span class="o">+</span>
+
+                 <span class="s1">&#39;DEBUG - datalake_requests:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+
+                 <span class="sa">f</span><span class="s1">&#39; - url: </span><span class="se">\n</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+
+                 <span class="sa">f</span><span class="s1">&#39; - method: </span><span class="se">\n</span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+
+                 <span class="sa">f</span><span class="s1">&#39; - headers: </span><span class="se">\n</span><span class="si">{</span><span class="n">headers</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+
+                 <span class="sa">f</span><span class="s1">&#39; - data: </span><span class="se">\n</span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+
+                 <span class="sa">f</span><span class="s1">&#39; - token: </span><span class="se">\n</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">token_manager</span><span class="o">.</span><span class="n">access_token</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+
+                 <span class="sa">f</span><span class="s1">&#39; - refresh_token: </span><span class="se">\n</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">token_manager</span><span class="o">.</span><span class="n">refresh_token</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+
+                 <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">terminal_size</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">debug</span>
+
+    <span class="k">def</span> <span class="nf">_build_url_for_endpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint_name</span><span class="p">):</span>
+
+        <span class="n">base_url</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">endpoint_config</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">environment</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">endpoint_config</span><span class="p">[</span><span class="s1">&#39;api_version&#39;</span><span class="p">])</span>
+
+        <span class="n">enpoints</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">endpoint_config</span><span class="p">[</span><span class="s1">&#39;endpoints&#39;</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">urljoin</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">enpoints</span><span class="p">[</span><span class="n">endpoint_name</span><span class="p">],</span> <span class="n">allow_fragments</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+<h2 id="classes">Classes</h2>
+<h3 id="endpoint">Endpoint</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Endpoint</span><span class="p">(</span>
+    <span class="n">endpoint_config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+    <span class="n">environment</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">token_manager</span><span class="p">:</span> <span class="n">datalake</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">token_manager</span><span class="o">.</span><span class="n">TokenManager</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nl">Endpoint</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">OCD_DTL_QUOTA_TIME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OCD_DTL_QUOTA_TIME&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">OCD_DTL_REQUESTS_PER_QUOTA_TIME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OCD_DTL_REQUESTS_PER_QUOTA_TIME&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Throttle selected: {OCD_DTL_REQUESTS_PER_QUOTA_TIME} queries per {OCD_DTL_QUOTA_TIME}s&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">SET_MAX_RETRY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nl">endpoint_config</span><span class="p">:</span><span class="w"> </span><span class="n">dict</span><span class="p">,</span><span class="w"> </span><span class="nl">environment</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">,</span><span class="w"> </span><span class="nl">token_manager</span><span class="p">:</span><span class="w"> </span><span class="n">TokenManager</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">endpoint_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">endpoint_config</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">environment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">terminal_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_get_terminal_size</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">token_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token_manager</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">SET_MAX_RETRY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">_get_terminal_size</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">int</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;Return the terminal size for pretty print&quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">terminal_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">get_terminal_size</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">terminal_size</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="n">terminal_size</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="ow">except</span><span class="w"> </span><span class="nl">OSError</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;Couldn&#39;t get terminal size, falling back to 80 char wide&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">80</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@throttle</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">period</span><span class="o">=</span><span class="n">OCD_DTL_QUOTA_TIME</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">call_per_period</span><span class="o">=</span><span class="n">OCD_DTL_REQUESTS_PER_QUOTA_TIME</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">datalake_requests</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="nl">url</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">method</span><span class="err">:</span><span class="w"> </span><span class="nf">str</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="nl">headers</span><span class="p">:</span><span class="w"> </span><span class="n">dict</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="nl">post_body</span><span class="p">:</span><span class="w"> </span><span class="n">dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">stream</span><span class="o">=</span><span class="k">False</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">Response</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">        Use it to request the API</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">tries_left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">SET_MAX_RETRY</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="n">tries_left</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">headers</span><span class="o">[</span><span class="n">&#39;Authorization&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">token_manager</span><span class="p">.</span><span class="n">access_token</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">_pretty_debug_request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="k">method</span><span class="p">,</span><span class="w"> </span><span class="n">post_body</span><span class="p">,</span><span class="w"> </span><span class="n">headers</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_send_request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="k">method</span><span class="p">,</span><span class="w"> </span><span class="n">headers</span><span class="p">,</span><span class="w"> </span><span class="n">post_body</span><span class="p">,</span><span class="w"> </span><span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">logger</span><span class="p">.</span><span class="n">isEnabledFor</span><span class="p">(</span><span class="n">logging</span><span class="p">.</span><span class="n">DEBUG</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="n">Don</span><span class="s1">&#39;t compute response.text var if not needed, especially for streaming response</span>
+
+<span class="s1">                logger.debug(&#39;</span><span class="n">API</span><span class="w"> </span><span class="nl">response</span><span class="p">:</span><span class="err">\</span><span class="n">n</span><span class="o">%</span><span class="n">s</span><span class="s1">&#39;, response.text)</span>
+
+<span class="s1">            if response.status_code == 401:</span>
+
+<span class="s1">                logger.warning(&#39;</span><span class="n">Token</span><span class="w"> </span><span class="n">expired</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">Missing</span><span class="w"> </span><span class="k">authorization</span><span class="w"> </span><span class="n">header</span><span class="p">.</span><span class="w"> </span><span class="n">Updating</span><span class="w"> </span><span class="n">token</span><span class="s1">&#39;)</span>
+
+<span class="s1">                self.token_manager.process_auth_error(response.json().get(&#39;</span><span class="n">messages</span><span class="s1">&#39;))</span>
+
+<span class="s1">            elif response.status_code == 422:</span>
+
+<span class="s1">                logger.warning(&#39;</span><span class="n">Bad</span><span class="w"> </span><span class="k">authorization</span><span class="w"> </span><span class="n">header</span><span class="p">.</span><span class="w"> </span><span class="n">Updating</span><span class="w"> </span><span class="n">token</span><span class="s1">&#39;)</span>
+
+<span class="s1">                logger.debug(f&#39;</span><span class="mi">422</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="nl">code</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="n">response</span><span class="p">.</span><span class="nc">text</span><span class="err">}</span><span class="s1">&#39;)</span>
+
+<span class="s1">                self.token_manager.process_auth_error(response.json().get(&#39;</span><span class="n">messages</span><span class="s1">&#39;))</span>
+
+<span class="s1">            elif response.status_code &lt; 200 or response.status_code &gt; 299:</span>
+
+<span class="s1">                logger.error(</span>
+
+<span class="s1">                    f&#39;</span><span class="n">API</span><span class="w"> </span><span class="n">returned</span><span class="w"> </span><span class="n">non</span><span class="w"> </span><span class="mi">2</span><span class="n">xx</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="err">}\</span><span class="n">n</span><span class="err">{</span><span class="n">response</span><span class="p">.</span><span class="nc">text</span><span class="err">}\</span><span class="n">n</span><span class="w"> </span><span class="n">Retrying</span><span class="s1">&#39;</span>
+
+<span class="s1">                )</span>
+
+<span class="s1">            else:</span>
+
+<span class="s1">                return response</span>
+
+<span class="s1">            tries_left -= 1</span>
+
+<span class="s1">        logger.error(&#39;</span><span class="n">Request</span><span class="w"> </span><span class="n">failed</span><span class="s1">&#39;)</span>
+
+<span class="s1">        raise ValueError(f&#39;</span><span class="err">{</span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="err">}:</span><span class="w"> </span><span class="err">{</span><span class="n">response</span><span class="p">.</span><span class="nc">text</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span><span class="err">}</span><span class="s1">&#39;)</span>
+
+<span class="s1">    @staticmethod</span>
+
+<span class="s1">    def _post_headers(output=Output.JSON) -&gt; dict:</span>
+
+<span class="s1">        &quot;&quot;&quot;headers for POST endpoints&quot;&quot;&quot;</span>
+
+<span class="s1">        return {&#39;</span><span class="n">Accept</span><span class="s1">&#39;: output.value, &#39;</span><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="s1">&#39;: &#39;</span><span class="n">application</span><span class="o">/</span><span class="n">json</span><span class="s1">&#39;}</span>
+
+<span class="s1">    @staticmethod</span>
+
+<span class="s1">    def _get_headers(output=Output.JSON) -&gt; dict:</span>
+
+<span class="s1">        &quot;&quot;&quot;headers for GET endpoints&quot;&quot;&quot;</span>
+
+<span class="s1">        return {&#39;</span><span class="n">Accept</span><span class="s1">&#39;: output.value}</span>
+
+<span class="s1">    @staticmethod</span>
+
+<span class="s1">    def _send_request(url: str, method: str, headers: dict, data: dict, stream=False) -&gt; Response:</span>
+
+<span class="s1">        &quot;&quot;&quot;</span>
+
+<span class="s1">        Send the correct http request to url from method [get, post, delete, patch, put].</span>
+
+<span class="s1">        Raise a TypeError &#39;</span><span class="k">Unknown</span><span class="w"> </span><span class="k">method</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">requests</span><span class="w"> </span><span class="err">{</span><span class="k">method</span><span class="err">}</span><span class="s1">&#39; when the method is not one of the above.</span>
+
+<span class="s1">        &quot;&quot;&quot;</span>
+
+<span class="s1">        common_kwargs = {</span>
+
+<span class="s1">            &#39;</span><span class="n">url</span><span class="s1">&#39;: url,</span>
+
+<span class="s1">            &#39;</span><span class="n">headers</span><span class="s1">&#39;: headers,</span>
+
+<span class="s1">            &#39;</span><span class="n">stream</span><span class="s1">&#39;: stream,</span>
+
+<span class="s1">        }</span>
+
+<span class="s1">        if method == &#39;</span><span class="k">get</span><span class="s1">&#39;:</span>
+
+<span class="s1">            api_response = requests.get(**common_kwargs)</span>
+
+<span class="s1">        elif method == &#39;</span><span class="n">post</span><span class="s1">&#39;:</span>
+
+<span class="s1">            api_response = requests.post(**common_kwargs, data=json.dumps(data))</span>
+
+<span class="s1">        elif method == &#39;</span><span class="k">delete</span><span class="s1">&#39;:</span>
+
+<span class="s1">            api_response = requests.delete(**common_kwargs, data=json.dumps(data))</span>
+
+<span class="s1">        elif method == &#39;</span><span class="n">patch</span><span class="s1">&#39;:</span>
+
+<span class="s1">            api_response = requests.patch(**common_kwargs, data=json.dumps(data))</span>
+
+<span class="s1">        elif method == &#39;</span><span class="n">put</span><span class="s1">&#39;:</span>
+
+<span class="s1">            api_response = requests.put(**common_kwargs, data=json.dumps(data))</span>
+
+<span class="s1">        else:</span>
+
+<span class="s1">            logger.debug(&#39;</span><span class="n">ERROR</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="n">Wrong</span><span class="w"> </span><span class="n">requests</span><span class="p">,</span><span class="w"> </span><span class="n">please</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="o">[</span><span class="n">get, post, put, patch, delete</span><span class="o">]</span><span class="w"> </span><span class="k">method</span><span class="s1">&#39;)</span>
+
+<span class="s1">            raise TypeError(&#39;</span><span class="k">Unknown</span><span class="w"> </span><span class="k">method</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">requests</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="s1">&#39;, method)</span>
+
+<span class="s1">        return api_response</span>
+
+<span class="s1">    def _pretty_debug_request(self, url: str, method: str, data: dict, headers: dict):</span>
+
+<span class="s1">        debug = (&#39;</span><span class="o">-</span><span class="s1">&#39; * self.terminal_size +</span>
+
+<span class="s1">                 &#39;</span><span class="n">DEBUG</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nl">datalake_requests</span><span class="p">:</span><span class="err">\</span><span class="n">n</span><span class="s1">&#39; +</span>
+
+<span class="s1">                 f&#39;</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nl">url</span><span class="p">:</span><span class="w"> </span><span class="err">\</span><span class="n">n</span><span class="err">{</span><span class="n">url</span><span class="err">}\</span><span class="n">n</span><span class="s1">&#39; +</span>
+
+<span class="s1">                 f&#39;</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">method</span><span class="err">:</span><span class="w"> </span><span class="err">\</span><span class="n">n</span><span class="err">{</span><span class="k">method</span><span class="err">}\</span><span class="n">n</span><span class="s1">&#39; +</span>
+
+<span class="s1">                 f&#39;</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nl">headers</span><span class="p">:</span><span class="w"> </span><span class="err">\</span><span class="n">n</span><span class="err">{</span><span class="n">headers</span><span class="err">}\</span><span class="n">n</span><span class="s1">&#39; +</span>
+
+<span class="s1">                 f&#39;</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">data</span><span class="err">:</span><span class="w"> </span><span class="err">\</span><span class="n">n</span><span class="err">{</span><span class="k">data</span><span class="err">}\</span><span class="n">n</span><span class="s1">&#39; +</span>
+
+<span class="s1">                 f&#39;</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nl">token</span><span class="p">:</span><span class="w"> </span><span class="err">\</span><span class="n">n</span><span class="err">{</span><span class="n">self</span><span class="p">.</span><span class="n">token_manager</span><span class="p">.</span><span class="n">access_token</span><span class="err">}\</span><span class="n">n</span><span class="s1">&#39; +</span>
+
+<span class="s1">                 f&#39;</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nl">refresh_token</span><span class="p">:</span><span class="w"> </span><span class="err">\</span><span class="n">n</span><span class="err">{</span><span class="n">self</span><span class="p">.</span><span class="n">token_manager</span><span class="p">.</span><span class="n">refresh_token</span><span class="err">}\</span><span class="n">n</span><span class="s1">&#39; +</span>
+
+<span class="s1">                 &#39;</span><span class="o">-</span><span class="s1">&#39; * self.terminal_size)</span>
+
+<span class="s1">        return debug</span>
+
+<span class="s1">    def _build_url_for_endpoint(self, endpoint_name):</span>
+
+<span class="s1">        base_url = urljoin(self.endpoint_config[&#39;</span><span class="n">main</span><span class="s1">&#39;][self.environment], self.endpoint_config[&#39;</span><span class="n">api_version</span><span class="s1">&#39;])</span>
+
+<span class="s1">        enpoints = self.endpoint_config[&#39;</span><span class="n">endpoints</span><span class="err">&#39;]</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">urljoin</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span><span class="w"> </span><span class="n">enpoints</span><span class="o">[</span><span class="n">endpoint_name</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">allow_fragments</span><span class="o">=</span><span class="k">True</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<hr />
+<h4 id="descendants">Descendants</h4>
+<ul>
+<li>datalake.endpoints.threats.Threats</li>
+<li>datalake.endpoints.bulk_search.BulkSearch</li>
+<li>datalake.endpoints.tags.Tags</li>
+<li>datalake.endpoints.advanced_search.AdvancedSearch</li>
+<li>datalake.endpoints.sightings.Sightings</li>
+</ul>
+<h4 id="class-variables">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">OCD_DTL_QUOTA_TIME</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">OCD_DTL_REQUESTS_PER_QUOTA_TIME</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">SET_MAX_RETRY</span>
+</code></pre></div>
+
+<h4 id="methods">Methods</h4>
+<h4 id="datalake_requests">datalake_requests</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">datalake_requests</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">previous_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">THROTTLE_QUEUE</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="err">[]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">call_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">time</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="n">Clear</span><span class="w"> </span><span class="n">calls</span><span class="w"> </span><span class="n">made</span><span class="w"> </span><span class="n">older</span><span class="w"> </span><span class="k">than</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">period</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="n">previous_call</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">previous_call</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">period</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nl">call_time</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">previous_call</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="k">Check</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">period</span><span class="w"> </span><span class="n">don</span><span class="s1">&#39;t allow the function to be called</span>
+
+<span class="s1">            if len(previous_call) &gt;= call_per_period:</span>
+
+<span class="s1">                time_since_first_call = (call_time - previous_call[0])</span>
+
+<span class="s1">                sleep(max(period - time_since_first_call, 0.1))  # Wait until a call has been made &#39;</span><span class="n">period</span><span class="err">&#39;</span><span class="w"> </span><span class="n">ago</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">assert</span><span class="w"> </span><span class="n">previous_call</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">period</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nc">time</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">previous_call</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">previous_call</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nc">time</span><span class="p">())</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">THROTTLE_QUEUE</span><span class="o">[</span><span class="n">f</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">previous_call</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">response</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../bulk_search/" title="Bulk Search" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Bulk Search
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Index
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Powered by
+        <a href="http://timothycrosley.github.io/portray">portray.</a>
+        You too can
+        <a href="http://timothycrosley.github.io/portray">
+          portray</a>
+        your Python project well using automatic documentation.
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+    
+  </body>
+</html>
