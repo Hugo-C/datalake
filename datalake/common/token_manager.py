@@ -55,8 +55,8 @@ class TokenManager:
         response = requests.post(url=self.url_refresh, headers=headers)
 
         json_response = response.json()
-        if response.status_code == 401 and json_response.get('messages') == 'Token has expired':
-            logger.debug('Refreshing the refresh token')
+        if response.status_code == 401 and json_response.get('msg') == 'Token has expired':
+            logger.info('Refreshing the refresh token')
             # Refresh token is also expired, we need to restart the authentication from scratch
             self.get_token()
         elif 'access_token' in json_response:
@@ -72,7 +72,8 @@ class TokenManager:
         """
         if error_msg in (
                 'Missing Authorization Header',
-                'Bad Authorization header. Expected value \'Token <JWT>\''
+                "Bad Authorization header. Expected value 'Token <JWT>'",
+                "Missing 'Token' type in 'Authorization' header. Expected 'Authorization: Token <JWT>'",
         ):
             self.get_token()
         elif error_msg == 'Token has expired':
