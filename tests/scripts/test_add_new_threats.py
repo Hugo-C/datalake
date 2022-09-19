@@ -28,6 +28,6 @@ def test_build_threat_from_atom_type():
             'external_analysis_link': ['https://someurl.co']
         }
     }
-    output = _build_threat_from_atom_type('d26351ba789fba3385d2382aa9d24908_TODO_REMOVE_ME', AtomType.FILE, ['https://someurl.co']).generate_atom_json()
+    output = _build_threat_from_atom_type('d26351ba789fba3385d2382aa9d24908', AtomType.FILE, ['https://someurl.co']).generate_atom_json()
 
     assert output == expected_file_atom
